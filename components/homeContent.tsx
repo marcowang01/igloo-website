@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import Center from './infiniteCanvas/center';
-
+import styles from '../styles/Home.module.css'
 
 import { type infProps, type posDict, InfDiv } from './infiniteCanvas/infiniteDiv'
+import Image from 'next/image';
 
-const offsetX = -275
 const pos : posDict = {
-  title: [offsetX, 0],
-  subtitle: [offsetX, 50],
+  title: [0, -175],
+  subtitle: [0, -75],
+  landingImg: [0, 175],
 }
 
 const HomeContent = (props: infProps) => {
@@ -15,15 +16,23 @@ const HomeContent = (props: infProps) => {
   return (
     <>
       {/* <Center {...props} /> */}
-      <InfDiv {...props} pos={pos.title} align='left' >
-        <h1>
-          Platz
-        </h1>
+      <InfDiv {...props} pos={pos.title} >
+        <div className={styles.title}>
+          Igloo
+        </div>
       </InfDiv>
-      <InfDiv {...props} pos={pos.subtitle} align='left'>
-        <h3>
-          an open source personal website template for creatives
-        </h3>
+      <InfDiv {...props} pos={pos.subtitle}>
+        <div className={styles.subtitle}>
+          an <span>organic, non-overwhelming</span> interface for your relationships
+        </div>
+      </InfDiv>
+      <InfDiv {...props} pos={pos.landingImg}>
+        <Image
+          src="/home/landing.svg" 
+          alt="landing" 
+          width={1700}
+          height={500}
+          className={styles.landingImg} />
       </InfDiv>
     </>
   )

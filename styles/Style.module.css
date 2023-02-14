@@ -1,0 +1,14 @@
+.title {
+  font-family: var(--sf-pro-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  text-transform: capitalize;
+}
+
+.p {
+  font-family: var(--sf-pro-text);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray-600);
+}

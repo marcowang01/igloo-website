@@ -6,6 +6,7 @@
     left: 0;
     overflow: hidden; 
     background-color: var(--background-color);
+    background-image: linear-gradient(var(--background-white) 50%, var(--background-blue));
     /* uncomment to use grid for designing and debugging */
     /* one grid square is 25 units */
     /* background-image: url(../public/grid.svg);

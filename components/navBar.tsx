@@ -14,10 +14,10 @@ const initItems = [{
   text: 'home',
   active: false,
 }, {
-  text: 'features',
+  text: 'architecture',
   active: false,
 }, {
-  text: 'tutorial',
+  text: 'style',
   active: false,
 }, {
   text: 'about',

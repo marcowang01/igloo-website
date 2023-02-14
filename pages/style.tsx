@@ -4,7 +4,7 @@ import InfiniteCanvas from '../components/infiniteCanvas/infiniteCanvas'
 
 // import Dock from '../components/dock';
 
-import FeaturesContent from '../components/featuresContent'
+import StyleContent from '../components/styleContent'
 
 import { type posDict } from '../components/infiniteCanvas/infiniteDiv'
 
@@ -16,9 +16,9 @@ const pos : posDict = {
   cmdk: [offsetX, 350],
 }
 
-export default function Features() {
+export default function Style() {
   // infinite canvas is a higher order component that takes a component as an argument
-  const InfiniteContent = InfiniteCanvas(FeaturesContent)
+  const InfiniteContent = InfiniteCanvas(StyleContent)
   // position and zoom values are arbitrary and serve as placeholders
   return (
     <div>
