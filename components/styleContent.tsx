@@ -94,7 +94,7 @@ const StyleContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.blockImage}>
         <Image
-          src="/style/blockSystem.svg"
+          src="/style/blocks.png"
           alt="block system"
           width={1092}
           height={425}
