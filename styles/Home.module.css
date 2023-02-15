@@ -1,4 +1,4 @@
-.title {
+.logoText {
   font-family: var(--sf-pro-display);
   font-size: 8rem;
   font-weight: 700;
@@ -9,18 +9,52 @@
   -webkit-text-fill-color: transparent;
 }
 
-.subtitle {
+.slogan {
   font-family: var(--sf-pro-display);
   font-size: 1.8rem;
   font-weight: 400;
 
   width: 400px;
   text-align: center;
-  background: -webkit-linear-gradient(var(--text-gray-dark), var(--text-gray-light));
+  background: -webkit-linear-gradient(var(--subtitle-gray-dark), var(--subtitle-gray-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.subtitle span {
+.slogan span {
   font-weight: 500;
+}
+
+.title {
+  font-family: var(--sf-pro-display);
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: var(--rtext-gray-dark);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: var(--sf-pro-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--rtext-gray-dark);
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: var(--sf-pro-display);
+  color: var(--rtext-gray-dark);
+}
+
+.text span {
+  font-weight: 700;
+}
+
+.spaces {
+  margin-top: 10em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1300px;
 }

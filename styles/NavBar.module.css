@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.nav-item:hover {
+  color: var(--gray-800);
+}
+
 .nav-item-highlighter {
   width: 155px;
   height: 55%;
