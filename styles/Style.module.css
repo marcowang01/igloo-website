@@ -3,12 +3,20 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--gray-600);
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
-.p {
+.text {
   font-family: var(--sf-pro-text);
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 300;
   color: var(--gray-600);
+  width: 600px;
+  margin-top: 0.5rem;
+}
+
+.image {
+  width: 600px;
+  height: auto;
+  object-fit: contain;
 }
