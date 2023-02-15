@@ -29,7 +29,7 @@
   font-family: var(--sf-pro-display);
   font-size: 2.7rem;
   font-weight: 700;
-  color: var(--rtext-gray-dark);
+  color: var(--text-gray-dark);
   text-transform: uppercase;
   text-align: center;
 }
@@ -38,13 +38,13 @@
   font-family: var(--sf-pro-display);
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--rtext-gray-dark);
+  color: var(--text-gray-dark);
   text-transform: uppercase;
 }
 
 .text {
   font-family: var(--sf-pro-display);
-  color: var(--rtext-gray-dark);
+  color: var(--text-gray-dark);
 }
 
 .text span {
