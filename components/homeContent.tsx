@@ -11,7 +11,7 @@ const pos : posDict = {
   landingImg: [0, 215],
   spaces: [0, 800],
   withinSpaces: [0, 1300],
-  withinSpacesVideo: [0, 1700],
+  withinSpacesVideo: [0, 1650],
   blurb: [0, 2200],
 }
 
@@ -122,7 +122,7 @@ const HomeContent = (props: infProps) => {
           width={100} height={300}
           style={{
             height: "auto",
-            width: "1000px",
+            width: "525px",
             objectFit: "contain",
         }}/>
       </InfDiv>
