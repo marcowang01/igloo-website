@@ -57,7 +57,7 @@ const StyleContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.color}>
         <div className={styles.title}>
-          color
+          colour
         </div>
         <div className={styles.text}>
           The design system uses a muted and neutral colour palette, drawing inspiration 
@@ -94,10 +94,11 @@ const StyleContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.blockImage}>
         <Image
-          src="/style/blockSystem.svg"
+          src="/style/blocks.png"
           alt="block system"
-          width={1000}
-          height={500}
+          width={1092}
+          height={425}
+          priority
         />
       </InfDiv>
     </>
