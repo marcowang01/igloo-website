@@ -6,9 +6,9 @@ import { type infProps, type posDict, InfDiv } from './infiniteCanvas/infiniteDi
 import Image from 'next/image';
 
 const pos : posDict = {
-  title: [0, -175],
-  subtitle: [0, -75],
-  landingImg: [0, 175],
+  title: [0, -150],
+  subtitle: [0, -50],
+  landingImg: [0, 190],
 }
 
 const HomeContent = (props: infProps) => {
