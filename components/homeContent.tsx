@@ -12,7 +12,7 @@ const pos : posDict = {
   spaces: [0, 800],
   withinSpaces: [0, 1300],
   withinSpacesVideo: [0, 1675],
-  blurb: [0, 2200],
+  blurb: [0, 2050],
 }
 
 interface spaceItem {
@@ -131,7 +131,7 @@ const HomeContent = (props: infProps) => {
         <div 
           className={styles.text}
           style={{
-            fontSize: '1.9rem',
+            fontSize: '1.5rem',
             fontWeight: 400,
             textAlign: 'center',
           }}>
