@@ -48,14 +48,19 @@ export default function AboutContent(props: infProps) {
         <div className={styles.list}>
           {positions.map((position) => {
             return (
-              <div className={styles.listItem}>
+              <div key={styles.role} className={styles.listItem}>
                 <div className={styles.role}>
                   {position.role}
                 </div>  
                 <div className={styles.peopleList}>
                   {position.people.map((person) => {
                       return (
-                        <div className={styles.people}>{person}</div>
+                        <div 
+                          key={person}
+                          className={styles.people}
+                        >
+                            {person}
+                        </div>
                       )
                   })}
                 </div>
