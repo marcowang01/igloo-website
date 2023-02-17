@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 import { type infProps, type posDict, InfDiv } from './infiniteCanvas/infiniteDiv'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const pos : posDict = {
   title: [0, -125],
@@ -12,7 +13,9 @@ const pos : posDict = {
   spaces: [0, 800],
   withinSpaces: [0, 1300],
   withinSpacesVideo: [0, 1700],
-  blurb: [0, 2200],
+  blockChannel: [0, 2200],
+  blockChannelImage: [0, 2600],
+  learnMore: [0, 3300],
 }
 
 interface spaceItem {
@@ -39,7 +42,7 @@ const HomeContent = (props: infProps) => {
 
   function renderItem({title, text}: spaceItem) {
     return (
-      <div>
+      <div key={title}>
         <div className={styles.subtitle}>
           {title}
         </div>
@@ -126,7 +129,7 @@ const HomeContent = (props: infProps) => {
             objectFit: "contain",
         }}/>
       </InfDiv>
-      <InfDiv {...props} pos={pos.blurb}>
+      <InfDiv {...props} pos={pos.blockChannel}>
         <div 
           className={styles.text}
           style={{
@@ -136,6 +139,65 @@ const HomeContent = (props: infProps) => {
           }}>
           We represent these activities with <span>BLOCKS</span>,<br /> 
           and organize them with <span>CHANNELS</span>.
+        </div>
+      </InfDiv>
+      <InfDiv {...props} pos={pos.blockChannelImage}>
+        <Image
+          src={'/home/blockChannel.png'}
+          alt={'blockChannel'}
+          width={1000}
+          height={0}
+          style={{height:'auto'}}
+        />
+      </InfDiv>
+      <InfDiv {...props} pos={pos.learnMore}>
+        <div className={styles.title}>
+          Learn More
+        </div>
+        <div className={styles.list}>
+          <div className={styles.listItem}>
+            <div className={styles.text}>
+              An <span>aggregated</span> and <span>concise</span> interface for your social life
+            </div>
+            <Link href={'architecture'} className={styles.clickable}>
+              <Image
+                src={'/home/architecture.svg'}
+                alt={'blockChannel'}
+                width={250}
+                height={0}
+                style={{height:'auto'}}
+              />
+            </Link>
+          </div>
+          <div className={styles.listItem}>
+            <div className={styles.text}>
+              A <span>neutral, adaptable, consistent</span> design system 
+              inspired by Inuit Igloo Building
+            </div>
+            <Link href={'architecture'} className={styles.clickable}>
+              <Image
+                src={'/home/style.svg'}
+                alt={'blockChannel'}
+                width={250}
+                height={0}
+                style={{height:'auto'}}
+              />
+            </Link>
+          </div>
+          <div className={styles.listItem}>
+            <div className={styles.text}>
+              Those behind the work
+            </div>
+            <Link href={'architecture'} className={styles.clickable}>
+              <Image
+                src={'/home/about.svg'}
+                alt={'blockChannel'}
+                width={250}
+                height={0}
+                style={{height:'auto'}}
+              />
+            </Link>
+          </div>
         </div>
       </InfDiv>
     </>
