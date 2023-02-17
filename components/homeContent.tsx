@@ -127,13 +127,14 @@ const HomeContent = (props: infProps) => {
             height: "auto",
             width: "1000px",
             objectFit: "contain",
+            opacity: "0.5",
         }}/>
       </InfDiv>
       <InfDiv {...props} pos={pos.blockChannel}>
         <div 
           className={styles.text}
           style={{
-            fontSize: '1.9rem',
+            fontSize: '1.5rem',
             fontWeight: 400,
             textAlign: 'center',
           }}>
