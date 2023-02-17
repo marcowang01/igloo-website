@@ -46,21 +46,16 @@ export default function AboutContent(props: infProps) {
       </InfDiv>
       <InfDiv {...props} pos={pos.positions}>
         <div className={styles.list}>
-          {positions.map((position) => {
+          {positions.map((position, index) => {
             return (
-              <div key={styles.role} className={styles.listItem}>
+              <div className={styles.listItem} key={index}>
                 <div className={styles.role}>
                   {position.role}
                 </div>  
                 <div className={styles.peopleList}>
-                  {position.people.map((person) => {
+                  {position.people.map((person, i) => {
                       return (
-                        <div 
-                          key={person}
-                          className={styles.people}
-                        >
-                            {person}
-                        </div>
+                        <div className={styles.people} key={i}>{person}</div>
                       )
                   })}
                 </div>
