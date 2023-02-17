@@ -15,7 +15,7 @@ const pos : posDict = {
   withinSpacesVideo: [0, 1700],
   blockChannel: [0, 2200],
   blockChannelImage: [0, 2600],
-  learnMore: [0, 3300],
+  learnMore: [0, 3400],
 }
 
 interface spaceItem {
@@ -151,7 +151,7 @@ const HomeContent = (props: infProps) => {
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.learnMore}>
-        <div className={styles.title}>
+        <div className={styles.title} style={{fontSize: '1.6em'}}>
           Learn More
         </div>
         <div className={styles.list}>
