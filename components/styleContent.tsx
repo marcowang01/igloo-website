@@ -97,7 +97,7 @@ const StyleContent = (props: infProps) => {
           src="/style/blocks.png"
           alt="block system"
           width={1092}
-          height={169}
+          height={222}
           priority
         />
       </InfDiv>
