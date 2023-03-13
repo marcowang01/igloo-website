@@ -14,7 +14,7 @@ const pos : posDict = {
   color: [offsetX, 1800],
   colorImage: [0, 2100],
   blockSystem: [offsetX, 2600],
-  blockImage: [0, 2850],
+  blockImage: [0, 2900],
 }
 
 const StyleContent = (props: infProps) => {
