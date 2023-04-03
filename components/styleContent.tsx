@@ -14,7 +14,7 @@ const pos : posDict = {
   color: [offsetX, 1800],
   colorImage: [0, 2100],
   blockSystem: [offsetX, 2600],
-  blockImage: [0, 3000],
+  blockImage: [0, 2900],
 }
 
 const StyleContent = (props: infProps) => {
@@ -97,7 +97,7 @@ const StyleContent = (props: infProps) => {
           src="/style/blocks.png"
           alt="block system"
           width={1092}
-          height={425}
+          height={222}
           priority
         />
       </InfDiv>

@@ -175,7 +175,7 @@ const HomeContent = (props: infProps) => {
               A <span>neutral, adaptable, consistent</span> design system 
               inspired by Inuit Igloo Building
             </div>
-            <Link href={'architecture'} className={styles.clickable}>
+            <Link href={'style'} className={styles.clickable}>
               <Image
                 src={'/home/style.svg'}
                 alt={'blockChannel'}
@@ -189,7 +189,7 @@ const HomeContent = (props: infProps) => {
             <div className={styles.text}>
               Those behind the work
             </div>
-            <Link href={'architecture'} className={styles.clickable}>
+            <Link href={'about'} className={styles.clickable}>
               <Image
                 src={'/home/about.svg'}
                 alt={'blockChannel'}

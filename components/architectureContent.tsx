@@ -15,6 +15,7 @@ interface TitleBlock {
 const offestX = -300
 const pos : posDict = {
   title: [0, 0],
+  underConstruction: [0, 90],
   arrow : [0, 375],
   blocks: [offestX, 600],
   blockImage: [0, 1050],
@@ -57,6 +58,11 @@ const ArchitectureContent = (props: infProps) => {
         <h2>
           An <span>aggregated</span> and <span>concise</span>
           <br /> interface for your social life
+        </h2>
+      </InfDiv>
+      <InfDiv {...props} pos={pos.underConstruction}>
+        <h2 style={{fontSize: "1rem", fontWeight: "400"}}>
+          currently being revamped for 2023!
         </h2>
       </InfDiv>
       <InfDiv {...props} pos={pos.arrow}>
