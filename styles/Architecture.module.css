@@ -1,0 +1,50 @@
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.icon {
+  padding-right: 0.7em;
+}
+
+
+.title {
+  font-family: var(--sf-pro-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: var(--gray-700);
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: var(--sf-pro-text);
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--gray-700);
+  width: 600px;
+  margin-top: 0.5rem;
+}
+
+.description {
+  font-family: var(--sf-pro-text);
+  font-size: 1em;
+  font-weight: 200;
+  color: var(--gray-700);
+  width: 350px;
+  margin-top: 0.5rem;
+}
+
+
+.image {
+  width: 600px;
+  height: auto;
+  object-fit: contain;
+}
