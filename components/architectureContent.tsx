@@ -184,6 +184,14 @@ const ArchitectureContent = (props: infProps) => {
           line2: "The built-in large language model will be able to summarize the block for you "
         })}
       </InfDiv>
+      <InfDiv {...props} pos={[pos.LLM[0]+ 270, pos.LLM[1] + 230]}>
+        <video autoPlay loop muted playsInline
+          src={'/architecture/llm.mp4'}
+          width={420} height={600}
+          style={{
+            objectFit: "contain",
+        }}/>
+      </InfDiv>
     </>
   )
 }
