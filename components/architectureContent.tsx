@@ -152,13 +152,12 @@ const ArchitectureContent = (props: infProps) => {
         })}
       </InfDiv>
       <InfDiv {...props} pos={[pos.spaces[0]+ 150, pos.spaces[1] + 180]}>
-        <Image
-          src="/architecture/3levels.png"
-          alt="blocks"
-          width={220}
-          height={600}
-          style={{height:'auto'}}
-        />
+        <video autoPlay loop muted playsInline
+          src={'/architecture/spaces.mp4'}
+          width={220} height={600}
+          style={{
+            objectFit: "contain",
+        }}/>
       </InfDiv>
       <InfDiv {...props} pos={[pos.spaces[0]+ 360, pos.spaces[1] + 170]} align={'left'}>
         <div className={styles.description}>
