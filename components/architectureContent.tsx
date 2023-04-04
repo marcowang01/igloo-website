@@ -60,11 +60,6 @@ const ArchitectureContent = (props: infProps) => {
           <br /> interface for your social life
         </h2>
       </InfDiv>
-      {/* <InfDiv {...props} pos={pos.underConstruction}>
-        <h2 style={{fontSize: "1rem", fontWeight: "400"}}>
-          currently being revamped for 2023!
-        </h2>
-      </InfDiv> */}
       <InfDiv {...props} pos={pos.arrow}>
         <Image
           src="/arrow.svg"
@@ -77,21 +72,20 @@ const ArchitectureContent = (props: infProps) => {
       <InfDiv {...props} pos={pos.blocks} align='left'>
         {titleBlocks({
           icon: "architecture/blocks.svg", 
-          title: "blocks", line1: "endeavors that nourishe relationships", line2: ""
+          title: "blocks", line1: "endeavors that nourish relationships", line2: ""
         })}
       </InfDiv>
-      <InfDiv {...props} pos={[pos.blocks[0]+ 150, pos.blocks[1] + 150]}>
-        <Image
-          src="/architecture/chatting.png"
-          alt="blocks"
-          width={300}
-          height={600}
-          style={{height:'auto'}}
-        />
+      <InfDiv {...props} pos={[pos.blocks[0]+ 170, pos.blocks[1] + 150]}>
+        <video autoPlay loop muted playsInline
+          src={'/architecture/chatting.mp4'}
+          width={300} height={600}
+          style={{
+            objectFit: "contain",
+        }}/>
       </InfDiv>
-      <InfDiv {...props} pos={[pos.blocks[0]+ 360, pos.blocks[1] + 170]} align={'left'}>
+      <InfDiv {...props} pos={[pos.blocks[0]+ 360, pos.blocks[1] + 130]} align={'left'}>
         <div className={styles.description}>
-          Blocks are a digital extension of events that nourishes our bonds with others. May it be hanging out with friends, listening to music, planning for a night out, or working on a project, we can always find a block that takes care of these activities.
+          Blocks are a digital extension of activities that nourishes our bonds with others. May it be hanging out with friends, listening to music, planning for a night out, or working on a project, we can always find a block that takes care of these activities.
         </div>
       </InfDiv>
       <InfDiv {...props} pos={[pos.blockImage[0]-50, pos.blockImage[1] - 110]}>
@@ -109,7 +103,7 @@ const ArchitectureContent = (props: infProps) => {
           alt="blocks"
           width={1300}
           height={600}
-          style={{height:'auto'}}
+          style={{height:'auto'}} 
         />
       </InfDiv>
 
@@ -129,9 +123,9 @@ const ArchitectureContent = (props: infProps) => {
           style={{height:'auto'}}
         />
       </InfDiv>
-      <InfDiv {...props} pos={[pos.channels[0]+ 360, pos.channels[1] + 170]} align={'left'}>
+      <InfDiv {...props} pos={[pos.channels[0]+ 360, pos.channels[1] + 150]} align={'left'}>
         <div className={styles.description}>
-          Channels organize our activities through time and block types. It makes sure you are notified by blocks you interact with while keeping you away from spams from past uninterested blocks.
+          Channels organize our activities through time and block types. It makes sure we are notified by blocks we've interacted with while keeping us away from spams from past uninterested blocks.
         </div>
       </InfDiv>
       <InfDiv {...props} pos={pos.channelImage}>
