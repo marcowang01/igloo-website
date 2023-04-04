@@ -20,10 +20,10 @@ const pos : posDict = {
   blocks: [offestX, 600],
   blockImage: [0, 1050],
   channels: [offestX, 1400],
-  channelImage: [0, 2300],
-  spaces: [offestX, 3000],
-  spaceImage: [0, 3700],
-  LLM: [offestX, 4300],
+  channelImage: [0, 2100],
+  spaces: [offestX, 2800],
+  spaceImage: [0, 3500],
+  LLM: [offestX, 3900],
 }
 
 function titleBlocks({icon, title, line1, line2}: TitleBlock) {
@@ -60,11 +60,11 @@ const ArchitectureContent = (props: infProps) => {
           <br /> interface for your social life
         </h2>
       </InfDiv>
-      <InfDiv {...props} pos={pos.underConstruction}>
+      {/* <InfDiv {...props} pos={pos.underConstruction}>
         <h2 style={{fontSize: "1rem", fontWeight: "400"}}>
           currently being revamped for 2023!
         </h2>
-      </InfDiv>
+      </InfDiv> */}
       <InfDiv {...props} pos={pos.arrow}>
         <Image
           src="/arrow.svg"
@@ -138,7 +138,7 @@ const ArchitectureContent = (props: infProps) => {
         <Image
           src="/architecture/channelsImg.png"
           alt="blocks"
-          width={1300}
+          width={800}
           height={600}
           style={{height:'auto'}}
         />
@@ -165,11 +165,11 @@ const ArchitectureContent = (props: infProps) => {
           A space hosts a variety of channels for different purposes. You will receive notifications on the space page for newly created blocks or updates in blocks you have interacted with. You can also search and filter for specific spaces and channels.  
         </div>
       </InfDiv>
-      <InfDiv {...props} pos={[pos.spaceImage[0]+25, pos.spaceImage[1] - 60]}>
+      <InfDiv {...props} pos={[pos.spaceImage[0]+25, pos.spaceImage[1] - 45]}>
         <Image
           src="/architecture/spacesText.svg"
           alt="blocks"
-          width={1150}
+          width={800}
           height={600}
           style={{height:'auto'}}
         />
@@ -178,7 +178,7 @@ const ArchitectureContent = (props: infProps) => {
         <Image
           src="/architecture/spacesImg.png"
           alt="blocks"
-          width={1300}
+          width={900}
           height={600}
           style={{height:'auto'}}
         />
@@ -186,7 +186,7 @@ const ArchitectureContent = (props: infProps) => {
 
       <InfDiv {...props} pos={pos.LLM} align='left'>
         {titleBlocks({
-          icon: "architecture/LLM.svg", 
+          icon: "architecture/llm.svg", 
           title: "LLM PREVIEW", line1: "Just like how our friends can give us the run down of their convo when we join",
           line2: "The built-in large language model will be able to summarize the block for you "
         })}
