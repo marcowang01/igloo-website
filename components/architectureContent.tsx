@@ -19,11 +19,11 @@ const pos : posDict = {
   arrow : [0, 375],
   blocks: [offestX, 600],
   blockImage: [0, 1050],
-  channels: [offestX, 1400],
-  channelImage: [0, 2100],
-  spaces: [offestX, 2800],
-  spaceImage: [0, 3500],
-  LLM: [offestX, 3900],
+  channels: [offestX, 1425],
+  channelImage: [0, 2050],
+  spaces: [offestX, 2600],
+  spaceImage: [0, 3200],
+  LLM: [offestX, 3600],
 }
 
 function titleBlocks({icon, title, line1, line2}: TitleBlock) {
