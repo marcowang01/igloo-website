@@ -125,7 +125,7 @@ const ArchitectureContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={[pos.channels[0]+ 360, pos.channels[1] + 150]} align={'left'}>
         <div className={styles.description}>
-          Channels organize our activities through time and block types. It makes sure we are notified by blocks we've interacted with while keeping us away from spams from past uninterested blocks.
+          Channels organize our activities through time and block types. It makes sure we are notified by blocks we`&apos;`ve interacted with while keeping us away from spams from past uninterested blocks.
         </div>
       </InfDiv>
       <InfDiv {...props} pos={pos.channelImage}>
