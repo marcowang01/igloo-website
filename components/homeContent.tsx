@@ -10,18 +10,19 @@ import landingImg from '../images/home/landing.svg'
 import aboutImg from '../images/home/about.svg'
 import architectureImg from '../images/home/architecture.svg'
 import styleImg from '../images/home/style.svg'
-import blockChannelImg from '../images/home/blockChannel.png'
+import blockChannelImg from '../images/home/blockChannel1.png'
 
+const yOffset = 125;
 const pos : posDict = {
-  title: [0, -125],
-  subtitle: [0, -25],
-  landingImg: [0, 215],
-  spaces: [0, 800],
-  withinSpaces: [0, 1300],
-  withinSpacesVideo: [0, 1700],
-  blockChannel: [0, 2200],
-  blockChannelImage: [0, 2600],
-  learnMore: [0, 3400],
+  title: [0, -125 + yOffset],
+  subtitle: [0, -25 + yOffset],
+  landingImg: [0, 215 + yOffset],
+  spaces: [0, 800 + yOffset],
+  withinSpaces: [0, 1300 + yOffset],
+  withinSpacesVideo: [0, 1700 + yOffset],
+  blockChannel: [0, 2200 + yOffset],
+  blockChannelImage: [0, 2600 + yOffset],
+  learnMore: [0, 3400 + yOffset],
 }
 
 interface spaceItem {
@@ -154,6 +155,7 @@ const HomeContent = (props: infProps) => {
           alt={'blockChannel'}
           width={1000}
           height={625}
+          unoptimized={true}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.learnMore}>

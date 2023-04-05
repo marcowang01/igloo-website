@@ -1,5 +1,5 @@
 .title {
-  font-family: var(--font-sf-pro-display);
+  /* font-family: var(--font-sf-pro-display); */
   font-size: 2rem;
   font-weight: 700;
   color: var(--gray-600);
@@ -7,7 +7,7 @@
 }
 
 .text {
-  font-family: var(--font-sf-pro-text);
+  /* font-family: var(--font-sf-pro-text); */
   font-size: 1em;
   font-weight: 300;
   color: var(--gray-600);
