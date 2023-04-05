@@ -1,5 +1,5 @@
 .logoText {
-  font-family: var(--sf-pro-display);
+  /* font-family: var(--sf-pro-display); */
   font-size: 8rem;
   font-weight: 700;
   /* color: var(--gray-600); */
@@ -10,7 +10,7 @@
 }
 
 .slogan {
-  font-family: var(--sf-pro-display);
+  /* font-family: var(--sf-pro-display); */
   font-size: 1.8rem;
   font-weight: 400;
 
@@ -26,7 +26,7 @@
 }
 
 .title {
-  font-family: var(--sf-pro-display);
+  /* font-family: var(--sf-pro-display); */
   font-size: 2.7rem;
   font-weight: 700;
   color: var(--text-gray-dark);
@@ -35,7 +35,7 @@
 }
 
 .subtitle {
-  font-family: var(--sf-pro-display);
+  /* font-family: var(--sf-pro-display); */
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-gray-dark);
@@ -43,7 +43,7 @@
 }
 
 .text {
-  font-family: var(--sf-pro-display);
+  /* font-family: var(--sf-pro-display); */
   color: var(--text-gray-dark);
 }
 

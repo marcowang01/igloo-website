@@ -1,6 +1,6 @@
 .description{
   width: 600px;
-  font-family: var(--sf-pro-display);
+  font-family: var(--font-sf-pro-display);
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--gray-600);
@@ -9,7 +9,7 @@
 
 .role {
   text-transform: uppercase;
-  font-family: var(--sf-pro-display);
+  font-family: var(--font-sf-pro-display);
   color: var(--gray-600);
   font-weight: 700;
   font-size: 1.1rem;
@@ -17,7 +17,7 @@
 }
 
 .people{
-  font-family: var(--sf-pro-display);
+  font-family: var(--font-sf-pro-display);
   color: var(--gray-500);
   font-weight: 300;
   font-size: 1.1rem;

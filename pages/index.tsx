@@ -3,6 +3,8 @@ import React from 'react';
 import InfiniteCanvas from '../components/infiniteCanvas/infiniteCanvas'
 import HomeContent from '../components/homeContent'
 
+import { sfProDisplay } from './_app';
+
 // TODO: add vertical mac doc? 
 // TODO: styled components?
 // TODO: add support for rendering pages in advance if big img or vid
@@ -24,7 +26,7 @@ export default function Home() {
   const InfiniteContent = InfiniteCanvas(HomeContent)
   // position and zoom values are arbitrary and serve as placeholders
   return (
-    <div>
+    <div className={sfProDisplay.className}>
       <InfiniteContent x={0} y={0} zoom={1}/>
     </div>
   ) 

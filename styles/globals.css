@@ -25,7 +25,7 @@
 }
 
 h2 {
-  font-family: var(--sf-pro-display);
+  /* font-family: var(--sf-pro-display); */
   font-size: 2rem;
   font-weight: 400;
   color: var(--gray-600);

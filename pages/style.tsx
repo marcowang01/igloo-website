@@ -8,6 +8,8 @@ import StyleContent from '../components/styleContent'
 
 import { type posDict } from '../components/infiniteCanvas/infiniteDiv'
 
+import { sfProText } from './_app';
+
 const offsetX = -295
 const pos : posDict = {
   infiniteCanvas: [offsetX, -150],
@@ -21,7 +23,7 @@ export default function Style() {
   const InfiniteContent = InfiniteCanvas(StyleContent)
   // position and zoom values are arbitrary and serve as placeholders
   return (
-    <div>
+    <div className={sfProText.className}>
       <InfiniteContent x={0} y={0} zoom={1}/>
     </div>
   ) 

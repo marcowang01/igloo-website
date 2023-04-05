@@ -5,6 +5,8 @@ import styles from '../styles/NavBar.module.css'
 import cx from 'classnames';
 import { useRouter } from 'next/router';
 
+import { sfProText } from '../pages/_app';
+
 interface Item {
   text: string,
   active: boolean,
@@ -78,29 +80,32 @@ const NavBar = () => {
 
 
   return (
-    <div className={styles["nav-container"]} id={"nav-container"}>
-    {
-      items.map((item, i) => (
-        // <Link href={item.text}>
-          <Link
-            // className={ styles[`nav-item item-${i} ${item.active ? 'active' : ''}`] }
-            href={item.text === "home" ? "/" : "/" + item.text}
-            className={ cx(
-              styles['nav-item'],
-              styles[`item-${i}`],
-              styles[item.active ? 'active' : ''],
-            ) }
-            id={ `item-${i}` }
-            key={ item.text }
-            onClick={ () => changeActiveItem(i) }
-          >
-            { renderItem(item) }
-          </Link>
-        // </Link>
-      ))
-    }
-    <div className={styles["nav-item-highlighter"]} id={"nav-item-highlighter"}/>
-  </div>
+    <div className={sfProText.className}>
+      <div className={styles["nav-container"]} id={"nav-container"}>
+        {
+          items.map((item, i) => (
+            // <Link href={item.text}>
+              <Link
+                // className={ styles[`nav-item item-${i} ${item.active ? 'active' : ''}`] }
+                href={item.text === "home" ? "/" : "/" + item.text}
+                className={ cx(
+                  styles['nav-item'],
+                  styles[`item-${i}`],
+                  styles[item.active ? 'active' : ''],
+                ) }
+                id={ `item-${i}` }
+                key={ item.text }
+                onClick={ () => changeActiveItem(i) }
+              >
+                { renderItem(item) }
+              </Link>
+            // </Link>
+          ))
+        }
+        <div className={styles["nav-item-highlighter"]} id={"nav-item-highlighter"}/>
+      </div>
+    </div>
+    
   )
 }
 

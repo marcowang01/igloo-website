@@ -6,6 +6,12 @@ import { type infProps, type posDict, InfDiv } from './infiniteCanvas/infiniteDi
 import Image from 'next/image';
 import Link from 'next/link';
 
+import landingImg from '../images/home/landing.svg'
+import aboutImg from '../images/home/about.svg'
+import architectureImg from '../images/home/architecture.svg'
+import styleImg from '../images/home/style.svg'
+import blockChannelImg from '../images/home/blockChannel.png'
+
 const pos : posDict = {
   title: [0, -125],
   subtitle: [0, -25],
@@ -75,7 +81,7 @@ const HomeContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.landingImg}>
         <Image
-          src="/home/landing.svg" 
+          src={landingImg} 
           alt="landing" 
           width={1700}
           height={500}
@@ -144,11 +150,10 @@ const HomeContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.blockChannelImage}>
         <Image
-          src={'/home/blockChannel.png'}
+          src={blockChannelImg}
           alt={'blockChannel'}
           width={1000}
-          height={0}
-          style={{height:'auto'}}
+          height={625}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.learnMore}>
@@ -162,11 +167,11 @@ const HomeContent = (props: infProps) => {
             </div>
             <Link href={'architecture'} className={styles.clickable}>
               <Image
-                src={'/home/architecture.svg'}
+                src={architectureImg}
                 alt={'blockChannel'}
                 width={250}
-                height={0}
-                style={{height:'auto'}}
+                height={64}
+                // style={{height:'auto'}}
               />
             </Link>
           </div>
@@ -177,11 +182,11 @@ const HomeContent = (props: infProps) => {
             </div>
             <Link href={'style'} className={styles.clickable}>
               <Image
-                src={'/home/style.svg'}
+                src={styleImg}
                 alt={'blockChannel'}
                 width={250}
-                height={0}
-                style={{height:'auto'}}
+                height={64}
+                // style={{height:'auto'}}
               />
             </Link>
           </div>
@@ -191,11 +196,11 @@ const HomeContent = (props: infProps) => {
             </div>
             <Link href={'about'} className={styles.clickable}>
               <Image
-                src={'/home/about.svg'}
+                src={aboutImg}
                 alt={'blockChannel'}
                 width={250}
-                height={0}
-                style={{height:'auto'}}
+                height={64}
+                // style={{height:'auto'}}
               />
             </Link>
           </div>

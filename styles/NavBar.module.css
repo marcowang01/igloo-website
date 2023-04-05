@@ -22,7 +22,7 @@
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
-  font-family: var(--sf-pro-text);
+  /* font-family: var(--sf-pro-text); */
   font-size: 1em;
   font-weight: 400;
   z-index: 2;

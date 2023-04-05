@@ -2,8 +2,16 @@ import React, {useState} from 'react';
 import Image from 'next/image';
 import Center from './infiniteCanvas/center';
 import styles from '../styles/Style.module.css'
+import classNames from 'classnames';
 
 import { type infProps, type posDict, InfDiv, InfClickDiv } from './infiniteCanvas/infiniteDiv'
+
+import blocksImg from '../images/style/blocks.png'
+import colorImg from '../images/style/color.svg'
+import inspirationImg from '../images/style/inspiration.svg'
+
+import { sfProDisplay } from '../pages/_app';
+import { sfProText } from '../pages/_app';
 
 const offsetX = 0
 const pos : posDict = {
@@ -48,11 +56,10 @@ const StyleContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.inspirationImage}>
         <Image
-          src="/style/inspiration.svg"
+          src={inspirationImg}
           alt="inspiration"
           width={600}
-          height={600}
-          className={styles.image}
+          height={606}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.color}>
@@ -70,12 +77,10 @@ const StyleContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.colorImage}>
         <Image
-          src="/style/color.svg"
+          src={colorImg}
           alt="color"
-          width={1000}
-          height={500}
-          className={styles.image}
-
+          width={600}
+          height={259}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.blockSystem}>
@@ -94,10 +99,10 @@ const StyleContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={pos.blockImage}>
         <Image
-          src="/style/blocks.png"
+          src={blocksImg}
           alt="block system"
           width={1092}
-          height={450}
+          height={225}
           priority
         />
       </InfDiv>

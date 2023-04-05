@@ -6,9 +6,21 @@ import styles from '../styles/Architecture.module.css'
 import { type infProps, type posDict, InfDiv } from './infiniteCanvas/infiniteDiv'
 import Image from 'next/image';
 
+import blocksIcon from '../images/architecture/blocks.svg'
+import channelsIcon from '../images/architecture/channels.svg'
+import spacesIcon from '../images/architecture/spaces.svg'
+import LLMIcon from '../images/architecture/llm.svg'
+import blocksImg from '../images/architecture/blocksImg.png'
+import blocksTextImg from '../images/architecture/blocksText.svg'
+import calendarImg from '../images/architecture/calendar.png'
+import channelsImg from '../images/architecture/channelsImg.png'
+import spacesImg from '../images/architecture/spacesImg.png'
+import spacesTextImg from '../images/architecture/spacesText.svg'
+
+
 interface TitleBlock {
   title: string,
-  icon: string,
+  icon: any,
   line1: string,
   line2: string,
 }
@@ -71,7 +83,7 @@ const ArchitectureContent = (props: infProps) => {
 
       <InfDiv {...props} pos={pos.blocks} align='left'>
         {titleBlocks({
-          icon: "architecture/blocks.svg", 
+          icon: blocksIcon, 
           title: "blocks", line1: "endeavors that nourish relationships", line2: ""
         })}
       </InfDiv>
@@ -90,57 +102,57 @@ const ArchitectureContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={[pos.blockImage[0]-50, pos.blockImage[1] - 110]}>
         <Image
-          src="/architecture/blocksText.svg"
+          src={blocksTextImg}
           alt="blocks"
           width={1170}
-          height={600}
-          style={{height:'auto'}}
+          height={117}
+          // style={{height:'auto'}}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.blockImage}>
         <Image
-          src="/architecture/blocksImg.png"
+          src={blocksImg}
           alt="blocks"
           width={1300}
-          height={600}
-          style={{height:'auto'}} 
+          height={299}
+          // style={{height:'auto'}} 
         />
       </InfDiv>
 
       <InfDiv {...props} pos={pos.channels} align='left'>
         {titleBlocks({
-          icon: "architecture/channels.svg", 
+          icon: channelsIcon, 
           title: "channels", line1: "blocks make up the content in a channel",
           line2: "just like how our activities make up our calendar"
         })}
       </InfDiv>
       <InfDiv {...props} pos={[pos.channels[0]+ 150, pos.channels[1] + 150]}>
         <Image
-          src="/architecture/calendar.png"
+          src={calendarImg}
           alt="blocks"
           width={300}
-          height={600}
-          style={{height:'auto'}}
+          height={224}
+          // style={{height:'auto'}}
         />
       </InfDiv>
       <InfDiv {...props} pos={[pos.channels[0]+ 360, pos.channels[1] + 150]} align={'left'}>
         <div className={styles.description}>
-          Channels organize our activities through time and block types. It makes sure we are notified by blocks we`&apos;`ve interacted with while keeping us away from spams from past uninterested blocks.
+          Channels organize our activities through time and block types. It makes sure we are notified by blocks we&apos;ve interacted with while keeping us away from spams from past uninterested blocks.
         </div>
       </InfDiv>
       <InfDiv {...props} pos={pos.channelImage}>
         <Image
-          src="/architecture/channelsImg.png"
+          src={channelsImg}
           alt="blocks"
           width={800}
-          height={600}
-          style={{height:'auto'}}
+          height={577}
+          // style={{height:'auto'}}
         />
       </InfDiv>
 
       <InfDiv {...props} pos={pos.spaces} align='left'>
         {titleBlocks({
-          icon: "architecture/spaces.svg", 
+          icon: spacesIcon, 
           title: "spaces", line1: "A space consists of different channels",
           line2: "And we interact in different spaces with different people for different occasions "
         })}
@@ -160,26 +172,26 @@ const ArchitectureContent = (props: infProps) => {
       </InfDiv>
       <InfDiv {...props} pos={[pos.spaceImage[0]+25, pos.spaceImage[1] - 45]}>
         <Image
-          src="/architecture/spacesText.svg"
+          src={spacesTextImg}
           alt="blocks"
           width={800}
-          height={600}
-          style={{height:'auto'}}
+          height={329}
+          // style={{height:'auto'}}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.spaceImage}>
         <Image
-          src="/architecture/spacesImg.png"
+          src={spacesImg}
           alt="blocks"
           width={900}
-          height={600}
-          style={{height:'auto'}}
+          height={416}
+          // style={{height:'auto'}}
         />
       </InfDiv>
 
       <InfDiv {...props} pos={pos.LLM} align='left'>
         {titleBlocks({
-          icon: "architecture/llm.svg", 
+          icon: LLMIcon, 
           title: "LLM PREVIEW", line1: "Just like how our friends can give us the run down of their convo when we join",
           line2: "The built-in large language model will be able to summarize the block for you "
         })}
