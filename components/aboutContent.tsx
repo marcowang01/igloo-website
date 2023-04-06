@@ -11,24 +11,29 @@ const pos: posDict = {
 interface Position {
   role: string
   people: string[]
+  links: string[]
 }
 
 const positions: Position[] = [
   {
     role: 'system design',
-    people: ['W.Marco', 'Z.ShaoBo']
+    people: ['W.Marco', 'Z.ShaoBo'],
+    links: ['https://marcowang.me/', 'https://boboland.xyz/']
   },
   {
     role: 'interface design',
-    people: ['X.Sherry', 'Z.ShaoBo']
+    people: ['X.Sherry', 'Z.ShaoBo'],
+    links: ['https://www.sherryxu.com/', 'https://boboland.xyz/']
   },
   {
     role: 'prototyping',
-    people: ['W.Marco', 'X.Sherry' ,'Z.ShaoBo']
+    people: ['W.Marco', 'X.Sherry' ,'Z.ShaoBo'],
+    links: ['https://marcowang.me/', 'https://www.sherryxu.com/', 'https://boboland.xyz/']
   },
   {
     role: 'engineering',
-    people: ['W.Marco', 'Z.ShaoBo']
+    people: ['W.Marco', 'Z.ShaoBo'],
+    links: ['https://marcowang.me/', 'https://boboland.xyz/']
   }
 ]
 
@@ -55,7 +60,9 @@ export default function AboutContent(props: infProps) {
                 <div className={styles.peopleList}>
                   {position.people.map((person, i) => {
                       return (
-                        <div className={styles.people} key={i}>{person}</div>
+                        <div className={styles.people} key={i}>
+                          <a href={position.links[i]} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>{person}</a>
+                        </div>
                       )
                   })}
                 </div>

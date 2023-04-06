@@ -25,6 +25,16 @@
   margin-left: 15px;
 }
 
+.people a {
+  pointer-events: all;
+  cursor: pointer;
+  color: var(--gray-500);
+}
+
+.people a:hover {
+  opacity: 0.5;
+}
+
 .list {
   width: 600px;
   display: flex;

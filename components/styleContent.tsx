@@ -60,7 +60,7 @@ const StyleContent = (props: infProps) => {
           alt="inspiration"
           width={600}
           height={606}
-          unoptimized
+          quality={90}
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.color}>
@@ -104,7 +104,7 @@ const StyleContent = (props: infProps) => {
           alt="block system"
           width={974}
           height={200}
-          unoptimized
+          quality={90}
         />
       </InfDiv>
     </>
