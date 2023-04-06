@@ -10,6 +10,7 @@ import blocksIcon from '../images/architecture/blocks.svg'
 import channelsIcon from '../images/architecture/channels.svg'
 import spacesIcon from '../images/architecture/spaces.svg'
 import LLMIcon from '../images/architecture/llm.svg'
+import autoGenIcon from '../images/architecture/autoGen.svg'
 import blocksImg from '../images/architecture/blocksImg.png'
 import blocksTextImg from '../images/architecture/blocksText.svg'
 import calendarImg from '../images/architecture/calendar.png'
@@ -33,9 +34,10 @@ const pos : posDict = {
   blockImage: [0, 1050],
   channels: [offestX, 1425],
   channelImage: [0, 2050],
-  spaces: [offestX, 2600],
-  spaceImage: [0, 3200],
-  LLM: [offestX, 3600],
+  spaces: [offestX, 2500],
+  spaceImage: [0, 3100],
+  LLM: [offestX, 3475],
+  autoGen: [offestX, 3925],
 }
 
 function titleBlocks({icon, title, line1, line2}: TitleBlock) {
@@ -199,9 +201,25 @@ const ArchitectureContent = (props: infProps) => {
           line2: "The built-in large language model will be able to summarize the block for you "
         })}
       </InfDiv>
-      <InfDiv {...props} pos={[pos.LLM[0]+ 270, pos.LLM[1] + 230]}>
+      <InfDiv {...props} pos={[pos.LLM[0]+ 270, pos.LLM[1] + 180]}>
         <video autoPlay loop muted playsInline
           src={'/architecture/llm.mp4'}
+          width={420} height={600}
+          style={{
+            objectFit: "contain",
+        }}/>
+      </InfDiv>
+
+      <InfDiv {...props} pos={pos.autoGen} align='left'>
+        {titleBlocks({
+          icon: autoGenIcon, 
+          title: "AUTO-GENERATED BLOCK ", line1: "Since we may not always remember to create a block for activities",
+          line2: "Igloo helps us auto generate and organize our activities into blocks"
+        })}
+      </InfDiv>
+      <InfDiv {...props} pos={[pos.autoGen[0]+ 270, pos.autoGen[1] + 250]}>
+        <video autoPlay loop muted playsInline
+          src={'/architecture/autoGen.mp4'}
           width={420} height={600}
           style={{
             objectFit: "contain",
