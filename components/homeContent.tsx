@@ -155,7 +155,7 @@ const HomeContent = (props: infProps) => {
           alt={'blockChannel'}
           width={1000}
           height={625}
-          quality={90}
+          unoptimized
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.learnMore}>
