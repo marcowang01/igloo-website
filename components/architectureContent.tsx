@@ -116,6 +116,7 @@ const ArchitectureContent = (props: infProps) => {
           width={1300}
           height={299}
           // style={{height:'auto'}} 
+          unoptimized
         />
       </InfDiv>
 
@@ -147,6 +148,7 @@ const ArchitectureContent = (props: infProps) => {
           width={800}
           height={577}
           // style={{height:'auto'}}
+          unoptimized
         />
       </InfDiv>
 
@@ -186,6 +188,7 @@ const ArchitectureContent = (props: infProps) => {
           width={900}
           height={416}
           // style={{height:'auto'}}
+          unoptimized
         />
       </InfDiv>
 

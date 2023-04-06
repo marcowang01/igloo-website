@@ -6,9 +6,9 @@ import classNames from 'classnames';
 
 import { type infProps, type posDict, InfDiv, InfClickDiv } from './infiniteCanvas/infiniteDiv'
 
-import blocksImg from '../images/style/blocks.png'
+import blocksImg from '../images/style/blocksSystem.png'
 import colorImg from '../images/style/color.svg'
-import inspirationImg from '../images/style/inspiration.svg'
+import inspirationImg from '../images/style/inspiration.png'
 
 import { sfProDisplay } from '../pages/_app';
 import { sfProText } from '../pages/_app';
@@ -22,7 +22,7 @@ const pos : posDict = {
   color: [offsetX, 1800],
   colorImage: [0, 2100],
   blockSystem: [offsetX, 2600],
-  blockImage: [0, 3000],
+  blockImage: [0, 2900],
 }
 
 const StyleContent = (props: infProps) => {
@@ -60,6 +60,7 @@ const StyleContent = (props: infProps) => {
           alt="inspiration"
           width={600}
           height={606}
+          unoptimized
         />
       </InfDiv>
       <InfDiv {...props} pos={pos.color}>
@@ -101,9 +102,9 @@ const StyleContent = (props: infProps) => {
         <Image
           src={blocksImg}
           alt="block system"
-          width={1092}
-          height={225}
-          priority
+          width={974}
+          height={200}
+          unoptimized
         />
       </InfDiv>
     </>
