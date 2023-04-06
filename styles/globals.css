@@ -85,7 +85,7 @@ h2 span {
   /* 	width: 350px; */
   /* 	font-size:26px; */
   /* font-family: Helvetica, sans-serif, Arial; */
-  animation: load 3s 0s ease-in-out;
+  animation: load 0.8s ease-in;
   /* 	animation-direction: alternate; */
   /* text-shadow: 0 0 1px white; */
 }
