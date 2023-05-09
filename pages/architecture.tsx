@@ -13,7 +13,7 @@ export default function Architecture() {
   // position and zoom values are arbitrary and serve as placeholders
   return (
     <div className={sfProText.className}>
-      <InfiniteContent x={0} y={0} zoom={1}/>
+      <InfiniteContent x={0} y={0} zoom={1} bounds={[-150,150,0,4000]}/>
     </div>
   ) 
 }

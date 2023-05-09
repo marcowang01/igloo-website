@@ -12,7 +12,7 @@ export default function About() {
   // position and zoom values are arbitrary and serve as placeholders
   return (
     <div className={sfProDisplay.className}>
-      <InfiniteContent x={0} y={0} zoom={1}/>
+      <InfiniteContent x={0} y={0} zoom={1} bounds={[0,0,0,0]}/>
     </div>
   ) 
 }

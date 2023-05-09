@@ -57,15 +57,13 @@
   }
   
   // config for zoom and pan bounds
-  const MIN_ZOOM = 0.1;
+  const MIN_ZOOM = 0.5;
   const MAX_ZOOM = 10;
 
-  const MIN_X = -100;
-  const MAX_X = 100;
-  const MIN_Y = -1000;
-  const MAX_Y = 500;
   
-  const IS_FINITE = false;
+  const SCALING_FACTOR = 1.5;
+  
+  const IS_FINITE = true;
   
   export class TouchZoom {
     #node: HTMLElement | null;
@@ -91,10 +89,19 @@
     isPinching = false;
     center: number[] = [0, 0];
     zoom: number = 1;
+    // bounds for zoom and pan
+    MIN_X: number = 0;
+    MAX_X: number = 0;
+    MIN_Y: number = 0;
+    MAX_Y: number = 1000;
+    zp_minX: number = this.MIN_X;
+    zp_maxX: number = this.MAX_X;
+    zp_minY: number = this.MIN_Y;
+    zp_maxY: number = this.MAX_Y;
   
     #preventGesture = (event: TouchEvent) => event.preventDefault();
   
-    constructor(node: HTMLElement) {
+    constructor(node: HTMLElement, zpBounds?: [number, number, number, number]) {
       // console.log(util.inspect(node, false, 1, true /* enable colors */))
       this.#node = node;
       this.#scrollingAnchor = getNearestScrollableContainer(node);
@@ -136,6 +143,15 @@
           },
         }
       );
+
+      this.MIN_X = zpBounds? zpBounds[0] : this.MIN_X;
+      this.MAX_X = zpBounds? zpBounds[1] : this.MAX_X;
+      this.MIN_Y = zpBounds? zpBounds[2] : this.MIN_Y;
+      this.MAX_Y = zpBounds? zpBounds[3] : this.MAX_Y;
+      this.zp_minX = this.MIN_X;
+      this.zp_maxX = this.MAX_X;
+      this.zp_minY = this.MIN_Y;
+      this.zp_maxY = this.MAX_Y;
       // console.log(util.inspect(this.#node, false, 1, true /* enable colors */))
     }
   
@@ -194,8 +210,8 @@
       }
       if (IS_FINITE) {
         this.center = [
-          Vec.clamp(pos[0], MIN_X, MAX_X),
-          Vec.clamp(pos[1], MIN_Y, MAX_Y),
+          Vec.clamp(pos[0], this.zp_minX, this.zp_maxX),
+          Vec.clamp(pos[1], this.zp_minY, this.zp_maxY),
         ];
       }
       this.center = pos;
@@ -210,7 +226,7 @@
     }
   
     #handleWheel: Handler<"wheel", WheelEvent> = ({ event: e }) => {
-      // console.log("wheel")
+      console.log("wheel")
       e.preventDefault();
       if (this.isPinching || e.timeStamp <= this.#wheelLastTimeStamp) return;
   
@@ -238,14 +254,19 @@
         let newCenter = Vec.add(this.center, movement);
         if (IS_FINITE) {
           newCenter = [
-            Vec.clamp(newCenter[0], MIN_X, MAX_X),
-            Vec.clamp(newCenter[1], MIN_Y, MAX_Y),
+            Vec.clamp(newCenter[0], this.zp_minX, this.zp_maxX),
+            Vec.clamp(newCenter[1], this.zp_minY, this.zp_maxY),
           ];
         }
         this.center = newCenter;
 
         // this.center = Vec.add(this.center, movement);
         this.zoom = newZoom;
+
+        this.zp_maxX = this.MAX_X * newZoom * SCALING_FACTOR;
+        this.zp_maxY = this.MAX_Y * newZoom * SCALING_FACTOR;
+        this.zp_minX = this.MIN_X * newZoom * SCALING_FACTOR;
+        this.zp_minY = this.MIN_Y * newZoom * SCALING_FACTOR;
   
         this.#moved();
         return;
@@ -265,10 +286,17 @@
 
       let newCenter = Vec.add(this.center, Vec.div(delta, this.zoom));
       if (IS_FINITE) {
-        newCenter = [
-          Vec.clamp(newCenter[0], MIN_X, MAX_X),
-          Vec.clamp(newCenter[1], MIN_Y, MAX_Y),
-        ];
+        if (Math.abs(delta[0]) > Math.abs(delta[1])) { // check if change in x direction is greater than change in y direction
+          newCenter = [
+            Vec.clamp(newCenter[0], this.zp_minX, this.zp_maxX),
+            Vec.clamp(newCenter[1], this.zp_minY, this.zp_maxY),
+          ];
+        } else {
+          newCenter = [
+            this.center[0],
+            Vec.clamp(newCenter[1], this.zp_minY, this.zp_maxY),
+          ];
+        }
       }
       this.center = newCenter;
       // this.center = Vec.add(this.center, Vec.div(delta, this.zoom));
@@ -307,13 +335,20 @@
       let newCenter = Vec.add(this.center, Vec.div(trueDelta, this.zoom * 2));
       if (IS_FINITE) {
         newCenter = [
-          Vec.clamp(newCenter[0], MIN_X, MAX_X),
-          Vec.clamp(newCenter[1], MIN_Y, MAX_Y),
+          Vec.clamp(newCenter[0], this.zp_minX, this.zp_maxX),
+          Vec.clamp(newCenter[1], this.zp_minY, this.zp_maxY),
         ];
       }
       this.center = newCenter;
       // this.center = Vec.add(this.center, Vec.div(trueDelta, this.zoom * 2));
-      this.zoom = Vec.clamp(this.zoom * zoomLevel, MIN_ZOOM, MAX_ZOOM);
+      const newZoom = Vec.clamp(this.zoom * zoomLevel, MIN_ZOOM, MAX_ZOOM);
+      this.zoom = newZoom;
+
+      this.zp_maxX = this.MAX_X * newZoom * SCALING_FACTOR;
+      this.zp_maxY = this.MAX_Y * newZoom * SCALING_FACTOR;
+      this.zp_minX = this.MIN_X * newZoom * SCALING_FACTOR;
+      this.zp_minY = this.MIN_Y * newZoom * SCALING_FACTOR;
+
       this.#moved();
     };
   
@@ -338,8 +373,8 @@
       let newCenter = Vec.sub(this.center, Vec.div(delta, this.zoom));
       if (IS_FINITE) {
         newCenter = [
-          Vec.clamp(newCenter[0], MIN_X, MAX_X),
-          Vec.clamp(newCenter[1], MIN_Y, MAX_Y),
+          Vec.clamp(newCenter[0], this.zp_minX, this.zp_maxX),
+          Vec.clamp(newCenter[1], this.zp_minY, this.zp_maxY),
         ];
       }
       this.center = newCenter;

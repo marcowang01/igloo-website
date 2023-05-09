@@ -9,6 +9,7 @@ export interface infProps {
   align?: alignOption,
   color?: string,
   url?: string,
+  bounds?: [number, number, number, number],
 }
 export type posDict = { [key: string]: [number, number] };
 

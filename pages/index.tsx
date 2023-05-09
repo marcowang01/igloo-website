@@ -5,19 +5,7 @@ import HomeContent from '../components/homeContent'
 
 import { sfProDisplay } from './_app';
 
-// TODO: add vertical mac doc? 
-// TODO: styled components?
-// TODO: add support for rendering pages in advance if big img or vid
-//         option to add loaders
-//         SGG vs SSR OPTIONS
-// TODO: initial pre load? 
-
-// TODO: add hover effect on navbar and link buttons
-// TODO: change margin between each dock icon to make them align to bg
-// TODO: make doc a bit higher
-// TODO: add min max bound as prop to pass in at page level
-// TODO: add 3 layers abstraction, can just pass in component list into big container? 
-// TODO: abstract out components --> more like library the better it is?
+// TODO: add option to do ratio based wheel events back onto platz as part of config
 
 // import Dock from '../components/dock';
 
@@ -27,7 +15,7 @@ export default function Home() {
   // position and zoom values are arbitrary and serve as placeholders
   return (
     <div className={sfProDisplay.className}>
-      <InfiniteContent x={0} y={0} zoom={1}/>
+      <InfiniteContent x={0} y={0} zoom={1} bounds={[-150,150,0,3500]}/>
     </div>
   ) 
 }

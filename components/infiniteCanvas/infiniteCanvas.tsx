@@ -20,7 +20,7 @@ const InfiniteCanvas = <P extends infProps>(WrappedComponent: React.ComponentTyp
     // can change bounds in touchZoom.ts L59-L68
     useEffect(() => {
       const frame = document.getElementById(ID) as HTMLDivElement;
-      const newTZ = new TouchZoom(frame);
+      const newTZ = new TouchZoom(frame, props.bounds);
       newTZ.onMove((manual) => {
         setX(newTZ.center[0])
         setY(newTZ.center[1])

@@ -24,7 +24,7 @@ export default function Style() {
   // position and zoom values are arbitrary and serve as placeholders
   return (
     <div className={sfProText.className}>
-      <InfiniteContent x={0} y={0} zoom={1}/>
+      <InfiniteContent x={0} y={0} zoom={1} bounds={[-20,20,0,2700]}/>
     </div>
   ) 
 }
